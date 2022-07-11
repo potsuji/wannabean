@@ -1,0 +1,369 @@
+@charset 'utf-8';
+@import 'mixin';
+
+
+h1{
+  max-width: 965px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+.main_visual{
+  background-image: url(../images/top/bg_mv.jpg);
+  background-size: cover;
+  height: 740px;
+  display: flex;
+  align-items: center;
+  @include mediaSP{
+    height: 500px;
+  }
+}
+
+
+
+
+/*--------タイピング風のアニメーション-------------*/
+
+.typW {
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 360px;
+  opacity: 0;
+  &.view{
+      opacity: 1;
+  }
+  @include mediaSP{
+      height: 280px;
+  }
+}
+
+#typA {
+  font-size: 60px;
+  color: #000;
+  text-align: left;
+  font-weight: bold;
+  @include mediaSP{
+      font-size: 20px;
+  }
+}
+
+.type_wrap{
+  @include mediaPC{
+      display: flex;
+  }
+}
+
+#typB,#typC {
+  font-size: 118px;
+  color: #fff;
+  text-align: left;
+  background: #000;
+  line-height: 1;
+  padding: 0;
+  letter-spacing: 0;
+  font-weight: bold;
+  width: fit-content;
+  @include mediaSP{
+      font-size: 60px;
+  }
+}
+
+#typD {
+  font-size: 50px;
+  color: #000;
+  text-align: center;
+  margin: 50px 0 0 ;
+  font-weight: bold;
+  @include mediaSP{
+      font-size: 20px;
+      margin: 20px 0 0 ;
+  }
+}
+
+.overview_txt{
+  margin: 0 auto;
+  max-width: 940px;
+  text-align: left;
+  line-height: 3;
+  @include mediaSP{
+      line-height: 2;
+      padding: 15px;
+  }
+}
+
+.overview_director{
+  margin: 0 0 0 auto;
+  width: fit-content;
+  @include mediaSP{
+      text-align: right;
+      margin: 60px 0 0 auto;
+  }
+}
+
+
+/*-----------btn_scroll--------------*/
+
+.btn_scroll {
+  max-width: none;
+  margin: 0;
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: 5;
+  position: relative;
+  top: 0;
+  font-weight: 900;
+  @include trans;
+}
+
+.btn_scroll.view {
+  opacity: 1;
+  top:-40px;
+}
+
+.btn_scroll {
+  display: block;
+  margin: 80px 0;
+}
+
+
+/*----------------------------------------------------
+JqueryのStudy
+----------------------------------------------------*/
+
+
+.po_red{
+  color: #ff0000;
+}
+
+.po_normal{
+  color: #ff0000;
+}
+
+.po_image {
+  width: 600px;
+  margin: 0 auto;
+  display: none;
+}
+
+.po_it {
+  width: 400px;
+  margin: 0 auto;
+  display: none;
+}
+
+#po_modal {
+  display: none;
+}
+
+
+#po_icon{
+  display: flex;
+}
+
+.lesson_hover{
+  p{
+    display: none;
+  }
+}
+
+.lesson_add{
+  p{
+    display: none;
+    &.look{
+      display: block;
+    }
+  }
+  span{
+    opacity: .3;
+    &.dont{
+      opacity: 1;
+    }
+  }
+}
+
+
+.acordion{
+
+}
+
+.answer{
+  display: none;
+  &.open{
+
+  }
+}
+
+/*------スライドの仕組み-------*/
+
+.slide{
+  width: 300px;
+  display: none;
+  margin: 0 auto;
+  &.active{
+    display: block;
+  }
+}
+
+.change-btn-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.change-btn{
+  padding: 10px;
+  background: #ccc;
+  margin: 10px;
+}
+
+.index-btn-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.index-btn{
+  padding: 10px;
+  background: #ccc;
+  margin: 10px;
+}
+
+.prev-btn {
+  /* 初期状態では非表示にしてください */
+  display: none; 
+}
+
+/*------共通部分の関数化-------*/
+
+.slide2{
+  width: 300px;
+  display: none;
+  margin: 0 auto;
+  &.active2{
+    display: block;
+  }
+}
+
+.change-btn-wrapper2{
+  display: flex;
+  justify-content: center;
+}
+
+.change-btn2{
+  padding: 10px;
+  background: #ccc;
+  margin: 10px;
+}
+
+.index-btn-wrapper2{
+  display: flex;
+  justify-content: center;
+}
+
+.index-btn2{
+  padding: 10px;
+  background: #ccc;
+  margin: 10px;
+}
+
+.prev-btn2 {
+  /* 初期状態では非表示にしてください */
+  display: none; 
+}
+
+
+
+/*------6. 関数を使おう-------*/
+
+.slide3{
+  width: 300px;
+  display: none;
+  margin: 0 auto;
+  &.active3{
+    display: block;
+  }
+}
+
+.change-btn-wrapper3{
+  display: flex;
+  justify-content: center;
+}
+
+.change-btn3{
+  padding: 10px;
+  background: #ccc;
+  margin: 10px;
+}
+
+.index-btn-wrapper3{
+  display: flex;
+  justify-content: center;
+}
+
+.index-btn3{
+  padding: 10px;
+  background: #ccc;
+  margin: 10px;
+}
+
+.prev-btn3 {
+  /* 初期状態では非表示にしてください */
+  display: none; 
+}
+
+
+
+
+/*------7. length-------*/
+
+.slide4{
+  width: 300px;
+  display: none;
+  margin: 0 auto;
+  &.active4{
+    display: block;
+  }
+}
+
+.change-btn-wrapper4{
+  display: flex;
+  justify-content: center;
+}
+
+.change-btn4{
+  padding: 10px;
+  background: #ccc;
+  margin: 10px;
+}
+
+.index-btn-wrapper4{
+  display: flex;
+  justify-content: center;
+}
+
+.index-btn4{
+  padding: 10px;
+  background: #ccc;
+  margin: 10px;
+}
+
+.prev-btn4 {
+  /* 初期状態では非表示にしてください */
+  display: none; 
+}
+
+.option-wrapper{
+  display: flex;
+}
+
+.header-menu-right{
+  display: flex;
+  a{
+    background: #ccc;
+    padding: 10px;
+    margin: 10px;
+  }
+}
